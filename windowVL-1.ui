@@ -1,0 +1,2106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainWindow</class>
+ <widget class="QMainWindow" name="mainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>770</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>粮食成分检测系统 1.1</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../source/icon/粮食.png</normaloff>../source/icon/粮食.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="Graph_ModelEffectShow">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <family>Microsoft YaHei UI</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>60</width>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="usesScrollButtons">
+       <bool>true</bool>
+      </property>
+      <property name="documentMode">
+       <bool>false</bool>
+      </property>
+      <property name="tabsClosable">
+       <bool>false</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="tab_operate">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/设备组合.png</normaloff>../source/icon/设备组合.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>设备控制</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QWidget" name="widget" native="true">
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>991</width>
+             <height>351</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Microsoft YaHei UI</family>
+             <pointsize>9</pointsize>
+            </font>
+           </property>
+           <property name="title">
+            <string>相机控制</string>
+           </property>
+           <widget class="QLabel" name="Image_display">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>10</y>
+              <width>491</width>
+              <height>271</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	border:2px solid gray;
+}</string>
+            </property>
+            <property name="text">
+             <string>这是图像显示区域</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_OpenDevice">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>50</y>
+              <width>111</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>打开设备</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_CloseDevice">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>110</y>
+              <width>111</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>关闭设备</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_StartDevice">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>170</y>
+              <width>111</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>开始采集</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_StopDevice">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>230</y>
+              <width>111</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Microsoft YaHei UI</family>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>关闭采集</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>10</y>
+              <width>18</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>10</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>触发方式：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_2">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>40</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>触发源：</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>130</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>曝光时间：</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_TriggerMode">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>10</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>OFF</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>ON</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="cb_TriggerSource">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>40</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>Software</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Line0</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Line2</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Line3</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLineEdit" name="txt_Shutter">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>130</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>80000</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_2">
+            <property name="geometry">
+             <rect>
+              <x>460</x>
+              <y>10</y>
+              <width>18</width>
+              <height>280</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_13">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>160</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>增益：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_Gain">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>160</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>2.0</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_14">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>70</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>软触发：</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_SoftTriggerCommand">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>70</y>
+              <width>151</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>发送软触发命令</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_16">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>100</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>触发极性：</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_TriggerActivation">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>100</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>FALL</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>RISE</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>190</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>自动白平衡：</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_AutoWhite">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>190</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>OFF</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Once</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Continuous</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_18">
+            <property name="geometry">
+             <rect>
+              <x>140</x>
+              <y>220</y>
+              <width>61</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>通道选择：</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="cb_RatioSelector">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>220</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>RED</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>GREEN</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>BLUE</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLineEdit" name="txt_BalanceRatio">
+            <property name="geometry">
+             <rect>
+              <x>200</x>
+              <y>250</y>
+              <width>151</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>2.0</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_19">
+            <property name="geometry">
+             <rect>
+              <x>130</x>
+              <y>250</y>
+              <width>71</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>白平衡系数：</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>340</y>
+             <width>981</width>
+             <height>281</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>工作台及光谱仪控制</string>
+           </property>
+           <widget class="QLabel" name="lab_SpectrunCaption">
+            <property name="geometry">
+             <rect>
+              <x>490</x>
+              <y>20</y>
+              <width>491</width>
+              <height>241</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QLabel
+{
+	border:2px solid gray;
+}</string>
+            </property>
+            <property name="text">
+             <string>这是光谱显示区域</string>
+            </property>
+           </widget>
+           <widget class="Line" name="line_3">
+            <property name="geometry">
+             <rect>
+              <x>460</x>
+              <y>10</y>
+              <width>18</width>
+              <height>310</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_17">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>40</y>
+              <width>451</width>
+              <height>221</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>PLC</string>
+            </property>
+            <widget class="QPushButton" name="btn_ConnectPLC">
+             <property name="geometry">
+              <rect>
+               <x>240</x>
+               <y>10</y>
+               <width>75</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>连接</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="btn_DisconnectPLC">
+             <property name="geometry">
+              <rect>
+               <x>350</x>
+               <y>10</y>
+               <width>75</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>断开</string>
+             </property>
+            </widget>
+            <widget class="QTabWidget" name="tabWidget">
+             <property name="geometry">
+              <rect>
+               <x>-10</x>
+               <y>20</y>
+               <width>461</width>
+               <height>201</height>
+              </rect>
+             </property>
+             <property name="currentIndex">
+              <number>1</number>
+             </property>
+             <widget class="QWidget" name="tab_4">
+              <attribute name="title">
+               <string>自动</string>
+              </attribute>
+              <widget class="QPushButton" name="btn_Auto_StartPLC">
+               <property name="geometry">
+                <rect>
+                 <x>30</x>
+                 <y>40</y>
+                 <width>71</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>开始</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Auto_StopPLC">
+               <property name="geometry">
+                <rect>
+                 <x>130</x>
+                 <y>40</y>
+                 <width>71</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>停止</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Auto_ResetPLC">
+               <property name="geometry">
+                <rect>
+                 <x>240</x>
+                 <y>40</y>
+                 <width>71</width>
+                 <height>51</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>复位</string>
+               </property>
+              </widget>
+             </widget>
+             <widget class="QWidget" name="tab_5">
+              <attribute name="title">
+               <string>手动</string>
+              </attribute>
+              <widget class="QPushButton" name="btn_Manu_ResetPLC">
+               <property name="geometry">
+                <rect>
+                 <x>220</x>
+                 <y>10</y>
+                 <width>91</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>reset</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Manu_Left1">
+               <property name="geometry">
+                <rect>
+                 <x>120</x>
+                 <y>40</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>&lt;&lt;</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Manu_Right1">
+               <property name="geometry">
+                <rect>
+                 <x>320</x>
+                 <y>40</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>&gt;&gt;</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Manu_Left2">
+               <property name="geometry">
+                <rect>
+                 <x>120</x>
+                 <y>80</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>&lt;&lt;</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Manu_Right2">
+               <property name="geometry">
+                <rect>
+                 <x>320</x>
+                 <y>80</y>
+                 <width>75</width>
+                 <height>23</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>&gt;&gt;</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_3">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>40</y>
+                 <width>51</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>1轴</string>
+               </property>
+              </widget>
+              <widget class="QLabel" name="label_20">
+               <property name="geometry">
+                <rect>
+                 <x>40</x>
+                 <y>90</y>
+                 <width>51</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>2轴</string>
+               </property>
+              </widget>
+              <widget class="QPushButton" name="btn_Manu_StopPLC">
+               <property name="geometry">
+                <rect>
+                 <x>220</x>
+                 <y>60</y>
+                 <width>91</width>
+                 <height>31</height>
+                </rect>
+               </property>
+               <property name="text">
+                <string>stop</string>
+               </property>
+              </widget>
+             </widget>
+            </widget>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_position">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/XLS.png</normaloff>../source/icon/XLS.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>数据读取</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="2">
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string>光谱数据加载</string>
+            </property>
+            <widget class="QPushButton" name="btn_SpectrumInput">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>20</y>
+               <width>641</width>
+               <height>23</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>光谱数据读入</string>
+             </property>
+            </widget>
+            <widget class="QTableWidget_with_spinner" name="dataset_Spectrumtable">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>50</y>
+               <width>641</width>
+               <height>561</height>
+              </rect>
+             </property>
+             <property name="toolTip">
+              <string extracomment="&quot;njfsdgfhsdf&quot;"/>
+             </property>
+             <property name="toolTipDuration">
+              <number>30000</number>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::NoEditTriggers</set>
+             </property>
+            </widget>
+            <widget class="QGroupBox" name="groupBox_4">
+             <property name="geometry">
+              <rect>
+               <x>660</x>
+               <y>0</y>
+               <width>325</width>
+               <height>618</height>
+              </rect>
+             </property>
+             <property name="title">
+              <string>指标加载</string>
+             </property>
+             <widget class="QPushButton" name="btn_IndexInput">
+              <property name="geometry">
+               <rect>
+                <x>360</x>
+                <y>20</y>
+                <width>121</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>指标数据读入</string>
+              </property>
+             </widget>
+             <widget class="QTableWidget_with_spinner" name="dataset_Indextable">
+              <property name="geometry">
+               <rect>
+                <x>360</x>
+                <y>50</y>
+                <width>121</width>
+                <height>561</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string extracomment="&quot;njfsdgfhsdf&quot;"/>
+              </property>
+              <property name="toolTipDuration">
+               <number>30000</number>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+             <widget class="QPushButton" name="btn_IndexInput_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>20</y>
+                <width>301</width>
+                <height>23</height>
+               </rect>
+              </property>
+              <property name="text">
+               <string>指标数据读入</string>
+              </property>
+             </widget>
+             <widget class="QTableWidget_with_spinner" name="dataset_Indextable_2">
+              <property name="geometry">
+               <rect>
+                <x>10</x>
+                <y>50</y>
+                <width>301</width>
+                <height>561</height>
+               </rect>
+              </property>
+              <property name="toolTip">
+               <string extracomment="&quot;njfsdgfhsdf&quot;"/>
+              </property>
+              <property name="toolTipDuration">
+               <number>30000</number>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_more">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/calender.png</normaloff>../source/icon/calender.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>预处理</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QWidget" name="widget_5" native="true">
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>281</width>
+             <height>341</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>方法选择</string>
+           </property>
+           <widget class="QComboBox" name="cb_PreprocessSelect">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>30</y>
+              <width>221</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>原始光谱</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>多元散射校正</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>标准正态变换</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SG卷积平滑</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>一阶导数</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>二阶导数</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>矢量归一化</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>小波变换</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QPushButton" name="btn_PreDataShow">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>190</y>
+              <width>221</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>显示预处理图像</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_6">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>0</y>
+             <width>691</width>
+             <height>341</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>预处理结果显示</string>
+           </property>
+           <widget class="PlotWidget" name="Graph_PreprocessShow">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>671</width>
+              <height>311</height>
+             </rect>
+            </property>
+            <property name="backgroundBrush">
+             <brush brushstyle="NoBrush">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_9">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>350</y>
+             <width>281</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>样本划分</string>
+           </property>
+           <widget class="QComboBox" name="cb_SampleDivide">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>30</y>
+              <width>221</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>KS划分</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SR划分</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SPXY划分</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>100</y>
+              <width>131</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>划分比例：</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="txt_SampleRatio">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>120</y>
+              <width>221</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="btn_SampleDistribution">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>180</y>
+              <width>221</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>划分样本</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_10">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>350</y>
+             <width>691</width>
+             <height>271</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string>样本分布显示</string>
+           </property>
+           <widget class="PlotWidget" name="Graph_SampleShow">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>20</y>
+              <width>671</width>
+              <height>241</height>
+             </rect>
+            </property>
+            <property name="backgroundBrush">
+             <brush brushstyle="NoBrush">
+              <color alpha="255">
+               <red>255</red>
+               <green>255</green>
+               <blue>255</blue>
+              </color>
+             </brush>
+            </property>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/decentralized-02.png</normaloff>../source/icon/decentralized-02.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>特征提取</string>
+       </attribute>
+       <widget class="QWidget" name="widget_2" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>451</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>特征方法选择</string>
+         </property>
+         <widget class="QToolBox" name="toolBox_FeatureExtraction">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>431</width>
+            <height>271</height>
+           </rect>
+          </property>
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="page_5">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>连续投影算法</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="page_6">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>431</width>
+             <height>166</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>竞争性自适应重加权算法</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="page_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>皮尔逊相关系数法</string>
+           </attribute>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="btn_FeatureSelect">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>330</y>
+            <width>201</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>确认选择</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_FeatureShow">
+          <property name="geometry">
+           <rect>
+            <x>240</x>
+            <y>330</y>
+            <width>201</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>波长显示</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_Extract_Status">
+          <property name="geometry">
+           <rect>
+            <x>40</x>
+            <y>300</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="geometry">
+          <rect>
+           <x>460</x>
+           <y>10</y>
+           <width>531</width>
+           <height>361</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>特征波长选择显示</string>
+         </property>
+         <widget class="PlotWidget" name="Graph_WavelengthShow">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>511</width>
+            <height>331</height>
+           </rect>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/QTUM.png</normaloff>../source/icon/QTUM.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>模型建立</string>
+       </attribute>
+       <widget class="QWidget" name="widget_3" native="true">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1001</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBox_11">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>441</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>模型方法选择</string>
+         </property>
+         <widget class="QToolBox" name="toolBox_ModelSelect">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>421</width>
+            <height>181</height>
+           </rect>
+          </property>
+          <property name="currentIndex">
+           <number>2</number>
+          </property>
+          <widget class="QWidget" name="page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>偏最小二乘法</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="page_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>100</width>
+             <height>30</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>BP神经网络</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="page_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>421</width>
+             <height>76</height>
+            </rect>
+           </property>
+           <attribute name="label">
+            <string>支持向量机</string>
+           </attribute>
+          </widget>
+         </widget>
+         <widget class="QPushButton" name="btn_ModelTrainning">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>240</y>
+            <width>201</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>模型训练</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_ModelFit">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>240</y>
+            <width>201</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>查看拟合结果</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_SaveModelParameter">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>300</y>
+            <width>421</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>保存模型参数</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="txt_saveModelPath">
+          <property name="geometry">
+           <rect>
+            <x>124</x>
+            <y>270</y>
+            <width>251</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>270</y>
+            <width>108</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>训练模型保存路径：</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_saveModelPath">
+          <property name="geometry">
+           <rect>
+            <x>384</x>
+            <y>270</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_Train_Status">
+          <property name="geometry">
+           <rect>
+            <x>20</x>
+            <y>210</y>
+            <width>71</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_12">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>10</y>
+           <width>541</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>模型效果显示</string>
+         </property>
+         <widget class="PlotWidget" name="Graph_ModelFitShow">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>521</width>
+            <height>301</height>
+           </rect>
+          </property>
+          <property name="backgroundBrush">
+           <brush brushstyle="NoBrush">
+            <color alpha="255">
+             <red>255</red>
+             <green>255</green>
+             <blue>255</blue>
+            </color>
+           </brush>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_13">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>350</y>
+           <width>541</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>真实值与预测值对比</string>
+         </property>
+         <widget class="QTableWidget_with_spinner" name="dataset_Predicttable">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>521</width>
+            <height>251</height>
+           </rect>
+          </property>
+          <property name="toolTip">
+           <string extracomment="&quot;njfsdgfhsdf&quot;"/>
+          </property>
+          <property name="toolTipDuration">
+           <number>30000</number>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_14">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>350</y>
+           <width>441</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>模型评估</string>
+         </property>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>40</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>训练集相关系数：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>110</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>测试集相关系数：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>40</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>训练集均方根误差：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>220</x>
+            <y>110</y>
+            <width>101</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>测试集均方根误差：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_TrainSetR_3">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>30</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_TrainSetRMSE_2">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>30</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_TestSetR_3">
+          <property name="geometry">
+           <rect>
+            <x>110</x>
+            <y>100</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_TestSetRMSE_2">
+          <property name="geometry">
+           <rect>
+            <x>330</x>
+            <y>100</y>
+            <width>81</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="icon">
+        <iconset>
+         <normaloff>../source/icon/icon_email.png</normaloff>../source/icon/icon_email.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>模型预测</string>
+       </attribute>
+       <widget class="QWidget" name="widget_4" native="true">
+        <property name="geometry">
+         <rect>
+          <x>-1</x>
+          <y>-1</y>
+          <width>1001</width>
+          <height>641</height>
+         </rect>
+        </property>
+        <widget class="QGroupBox" name="groupBox_15">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>431</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>预测模型选择</string>
+         </property>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>加载模型文件路径：</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_ModelFilePath">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>20</y>
+            <width>241</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>50</y>
+            <width>111</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>加载预测数据：</string>
+          </property>
+         </widget>
+         <widget class="QLineEdit" name="lineEdit_DataLoading">
+          <property name="geometry">
+           <rect>
+            <x>120</x>
+            <y>50</y>
+            <width>241</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_predict">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>80</y>
+            <width>401</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>开始预测</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_DataLoadingPath">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>50</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="btn_ModelFilePath">
+          <property name="geometry">
+           <rect>
+            <x>380</x>
+            <y>20</y>
+            <width>41</width>
+            <height>23</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>...</string>
+          </property>
+         </widget>
+        </widget>
+        <widget class="QGroupBox" name="groupBox_16">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>10</y>
+           <width>541</width>
+           <height>281</height>
+          </rect>
+         </property>
+         <property name="title">
+          <string>预测记录</string>
+         </property>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>61</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>预测结果：</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="txt_PredictResult">
+          <property name="geometry">
+           <rect>
+            <x>70</x>
+            <y>20</y>
+            <width>54</width>
+            <height>21</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_F">
+    <property name="title">
+     <string>文件(&amp;F)</string>
+    </property>
+    <addaction name="menuItem_new"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_openFile"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_saveFile"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_quitSystem"/>
+   </widget>
+   <widget class="QMenu" name="menu_C">
+    <property name="title">
+     <string>功能(&amp;C)</string>
+    </property>
+    <addaction name="menuItem_imagesDect"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_videoDect"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_trainModel"/>
+    <addaction name="separator"/>
+    <addaction name="munuItem_GussianTran"/>
+    <addaction name="separator"/>
+    <addaction name="actions_2"/>
+    <addaction name="separator"/>
+    <addaction name="munuItem_coorSystemTran"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menu_S">
+    <property name="title">
+     <string>设置(&amp;S)</string>
+    </property>
+    <addaction name="munuItem_windowSet"/>
+    <addaction name="separator"/>
+    <addaction name="menuItem_backWelcome"/>
+    <addaction name="separator"/>
+    <addaction name="munuItem_systemPara"/>
+    <addaction name="separator"/>
+    <addaction name="munuItem_statusBar"/>
+    <addaction name="munuItem_fileStatusBar"/>
+   </widget>
+   <widget class="QMenu" name="menu_V">
+    <property name="title">
+     <string>版本(&amp;V)</string>
+    </property>
+    <addaction name="munuItem_version"/>
+    <addaction name="munuItem_license"/>
+    <addaction name="munuItem_contact"/>
+   </widget>
+   <widget class="QMenu" name="menu_H">
+    <property name="title">
+     <string>帮助(&amp;H)</string>
+    </property>
+    <addaction name="munuItem_onlineHelp"/>
+    <addaction name="munuItem_localHelp"/>
+   </widget>
+   <addaction name="menu_F"/>
+   <addaction name="menu_C"/>
+   <addaction name="menu_S"/>
+   <addaction name="menu_H"/>
+   <addaction name="menu_V"/>
+  </widget>
+  <action name="menuItem_new">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/baogao.png</normaloff>../source/icon/baogao.png</iconset>
+   </property>
+   <property name="text">
+    <string>新建(&amp;N)</string>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+  </action>
+  <action name="menuItem_openFile">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/icon.png</normaloff>../source/icon/icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>打开文件(&amp;O)</string>
+   </property>
+  </action>
+  <action name="menuItem_saveFile">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/save.png</normaloff>../source/icon/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>保存文件(&amp;S)</string>
+   </property>
+  </action>
+  <action name="menuItem_quitSystem">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/decentralized-02.png</normaloff>../source/icon/decentralized-02.png</iconset>
+   </property>
+   <property name="text">
+    <string>退出系统(&amp;Q)</string>
+   </property>
+  </action>
+  <action name="munuItem_markbook">
+   <property name="text">
+    <string>训练模型(&amp;M)</string>
+   </property>
+   <property name="iconText">
+    <string>训练模型(&amp;M)</string>
+   </property>
+  </action>
+  <action name="munuItem_controlNet">
+   <property name="text">
+    <string>码率调整(&amp;D)</string>
+   </property>
+  </action>
+  <action name="munuItem_cacuPara">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/designer-tools.png</normaloff>../source/icon/designer-tools.png</iconset>
+   </property>
+   <property name="text">
+    <string>计算参数(&amp;P)</string>
+   </property>
+  </action>
+  <action name="munuItem_systemPara">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/set.png</normaloff>../source/icon/set.png</iconset>
+   </property>
+   <property name="text">
+    <string>系统参数(&amp;S)</string>
+   </property>
+  </action>
+  <action name="munuItem_windowSet">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/calender.png</normaloff>../source/icon/calender.png</iconset>
+   </property>
+   <property name="text">
+    <string>界面设置(&amp;W)</string>
+   </property>
+  </action>
+  <action name="munuItem_onlineHelp">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/lineOneline.png</normaloff>../source/icon/lineOneline.png</iconset>
+   </property>
+   <property name="text">
+    <string>在线帮助(&amp;I)</string>
+   </property>
+  </action>
+  <action name="munuItem_localHelp">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/line.png</normaloff>../source/icon/line.png</iconset>
+   </property>
+   <property name="text">
+    <string>本地文档(&amp;I)</string>
+   </property>
+  </action>
+  <action name="munuItem_version">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/file.png</normaloff>../source/icon/file.png</iconset>
+   </property>
+   <property name="text">
+    <string>版本信息(&amp;V)</string>
+   </property>
+  </action>
+  <action name="menuItem_backWelcome">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/home.png</normaloff>../source/icon/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>返回欢迎界面(&amp;B)</string>
+   </property>
+  </action>
+  <action name="munuItem_statusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/mes.png</normaloff>../source/icon/mes.png</iconset>
+   </property>
+   <property name="text">
+    <string>状态信息栏(&amp;I) </string>
+   </property>
+  </action>
+  <action name="munuItem_fileStatusBar">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/tree.png</normaloff>../source/icon/tree.png</iconset>
+   </property>
+   <property name="text">
+    <string>文件列表栏(&amp;F)</string>
+   </property>
+  </action>
+  <action name="munuItem_license">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/zaogao.png</normaloff>../source/icon/zaogao.png</iconset>
+   </property>
+   <property name="text">
+    <string>开源证书(&amp;L)</string>
+   </property>
+  </action>
+  <action name="munuItem_coorSystemTran">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>更多功能(待开发)...(&amp;H)</string>
+   </property>
+  </action>
+  <action name="menuItem_imagesDect">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/document.png</normaloff>../source/icon/document.png</iconset>
+   </property>
+   <property name="text">
+    <string>影像目标检测(&amp;T)</string>
+   </property>
+  </action>
+  <action name="munuItem_GussianTran">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>违章侦测(&amp;S)</string>
+   </property>
+  </action>
+  <action name="munuItem_contact">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/conme.png</normaloff>../source/icon/conme.png</iconset>
+   </property>
+   <property name="text">
+    <string>联系方式(&amp;L)</string>
+   </property>
+  </action>
+  <action name="menuItem_trainModel">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/CPU_GPU.png</normaloff>../source/icon/CPU_GPU.png</iconset>
+   </property>
+   <property name="text">
+    <string>模型训练(&amp;L)</string>
+   </property>
+  </action>
+  <action name="actiond">
+   <property name="text">
+    <string>图像识别(&amp;P)</string>
+   </property>
+  </action>
+  <action name="menuItem_videoDect">
+   <property name="icon">
+    <iconset>
+     <normaloff>../source/icon/animation.png</normaloff>../source/icon/animation.png</iconset>
+   </property>
+   <property name="text">
+    <string>视频目标检测(&amp;V)</string>
+   </property>
+  </action>
+  <action name="actions_2">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>在线/监控流视频实时监测(&amp;T)</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QTableWidget_with_spinner</class>
+   <extends>QTableWidget</extends>
+   <header location="global">personalised_widgets</header>
+  </customwidget>
+  <customwidget>
+   <class>PlotWidget</class>
+   <extends>QGraphicsView</extends>
+   <header>pyqtgraph</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
